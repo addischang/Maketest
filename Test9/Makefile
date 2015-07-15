@@ -4,7 +4,7 @@ LIBS = lm
 CC   = gcc
 
 # Declare the objects which I have
-objects = main.o thankyou.o
+objects = main.o
 
 #CFLAGS 
 
@@ -13,8 +13,6 @@ objects = main.o thankyou.o
 # The $@ is means main 
 main: ${objects}
 	${CC} -o $@ ${objects} 
-	# clear 
-	./$@
 
 # The commmond line, "clean". Notice that, there must begin with "TAB" button.  
 # rm -f main $^ means remove forced for main main.o thankyou.o   
@@ -24,4 +22,4 @@ clean:
 # The commmond line, "output". Notice that, there must begin with "TAB" button.
 # ./main means execution the result of main  
 output:
-	./main
+	./main &&

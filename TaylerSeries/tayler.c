@@ -1,50 +1,16 @@
-#include<stdio.h>
-#include<stdlib.h>
-
-// The main loop
-int main()
-{
-	// 
-	float sins( float, int );
-	float coss( float, int );
-	float tans( float, int );
-
-
-	// 
-	float a, x, y, z;
-	int n;
-
-	//
-	n = 10;
-	a = 0.15;
-    x = sins( a, n );
-    y = coss( a, n );
-    z = tans( a, n );
-	
-	//
-	printf( "sin(%10.6f)=%10.6f \n", a, x );
-	printf( "cos(%10.6f)=%10.6f \n", a, y );
-	printf( "tan(%10.6f)=%10.6f \n", a, z );
-	
-	//
-	return 0;
-}
+#include"tayler.h"
 
 float tans( float x, int n )
-{
-	//
-	float sins( float, int );
-	float coss( float, int );
-	
+{	
 	//
 	return sins( x, n ) / coss( x, n );
-}
+};
 
 float coss( float x, int n )
 {
 	//
-	float y, s, t, u, pows( float, int );
-	int i, factorial( int );
+	float y, s, t, u;
+	int i;
 	
 	y = 1.00;
 	
@@ -57,13 +23,13 @@ float coss( float x, int n )
 	}
 
 	return y;
-}
+};
 
 float sins( float x, int n )
 {
 	//
-	float y, s, t, u, pows( float, int );
-	int i, factorial( int );
+	float y, s, t, u;
+	int i;
 	
 	y = x;
 
@@ -76,7 +42,7 @@ float sins( float x, int n )
 	}
 	
 	return y;
-}
+};
 
 
 float pows( float x, int n  )
@@ -90,9 +56,9 @@ float pows( float x, int n  )
 	}
 
 	return y;
-}
+};
 
-int factorial( int n )
+float factorial( int n )
 {	
 	int i, y = 1;
 	
@@ -101,6 +67,5 @@ int factorial( int n )
 		y = y * i;	
 	}
 
-	return y;
-}
-
+	return y * 1.0;
+};

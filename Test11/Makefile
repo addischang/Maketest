@@ -1,10 +1,10 @@
-LIBS = lm
+LIBS = -lm
 
 # Declare the cross compiler as gcc
 CC   = gcc
 
 # Declare the objects which I have
-objects = main.o thankyou.o
+objects = main.o
 
 #CFLAGS 
 
@@ -12,9 +12,7 @@ objects = main.o thankyou.o
 # gcc -o $@ $^ means specify the outfile as main main.o thankyou.o
 # The $@ is means main 
 main: ${objects}
-	${CC} -o $@ ${objects} 
-	# clear 
-	./$@
+	${CC} -o $@ ${objects} ${LIBS} 
 
 # The commmond line, "clean". Notice that, there must begin with "TAB" button.  
 # rm -f main $^ means remove forced for main main.o thankyou.o   
